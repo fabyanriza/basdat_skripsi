@@ -41,3 +41,7 @@ Route::get('/pengajuan-seminar-proposal', function () {
 Route::get('/test', function(){
     return view('test');
 });
+
+Route::get('/p', function(){
+    return view('p');
+});
