@@ -11,9 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('mahasiswas', function (Blueprint $table) {
-            $table->id();
+        Schema::create('operators', function (Blueprint $table) {
+            $table->id('operator_id');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+
+            // Set foreign key untuk user_id
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
         });
     }
 
@@ -22,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('mahasiswas');
+        Schema::dropIfExists('operators');
     }
 };
