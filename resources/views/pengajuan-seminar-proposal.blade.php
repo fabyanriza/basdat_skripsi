@@ -27,7 +27,7 @@
                 </li>
                 <li class="bg-white text-black rounded-lg px-4 py-2 shadow">
                     <a href="{{ route('pengajuan-seminar-proposal') }}">Pengajuan Seminar Proposal</a>
-                </li>
+                </li>           
                 
                 
                 <li class="hover:bg-purple-600 rounded-lg px-4 py-2 transition duration-300">
