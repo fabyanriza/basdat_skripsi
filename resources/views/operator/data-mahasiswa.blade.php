@@ -41,24 +41,24 @@
       </div>
 
       <!-- Features Section -->
-      <div class="space-y-4">
+      <div class="space-y-6">
         <!-- Link to "Pengajuan Judul Skripsi" Page -->
         <a href="{{ route('pengajuan-judul-skripsi') }}">
-          <div class="bg-purple-400 text-white text-lg font-bold p-6 rounded-lg shadow-md hover:bg-purple-500 transition">
+          <div class="bg-purple-400 text-white text-lg font-bold p-6 rounded-lg shadow-md hover:bg-purple-500 transition mt-4">
             Pengajuan Judul Skripsi
           </div>
         </a>
 
         <!-- Link to "Pengajuan Seminar Proposal" Page -->
         <a href="{{ route('pengajuan-seminar-proposal') }}">
-          <div class="bg-purple-400 text-white text-lg font-bold p-6 rounded-lg shadow-md hover:bg-purple-500 transition">
+          <div class="bg-purple-400 text-white text-lg font-bold p-6 rounded-lg shadow-md hover:bg-purple-500 transition mt-4">
             Pengajuan Seminar Proposal
           </div>
         </a>
 
         <!-- Link to "Pengajuan Seminar Hasil" Page -->
         <a href="{{ route('pengajuan-seminar-hasil') }}">
-          <div class="bg-purple-400 text-white text-lg font-bold p-6 rounded-lg shadow-md hover:bg-purple-500 transition">
+          <div class="bg-purple-400 text-white text-lg font-bold p-6 rounded-lg shadow-md hover:bg-purple-500 transition mt-4">
             Pengajuan Seminar Hasil
           </div>
         </a>

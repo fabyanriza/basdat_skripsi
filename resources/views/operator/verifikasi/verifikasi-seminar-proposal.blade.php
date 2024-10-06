@@ -37,31 +37,51 @@
     <div class="w-8/12 p-8">
       <!-- Header -->
       <div class="mb-8">
-        <h1 class="text-2xl font-bold">Verifikasi Pengajuan Skripsi</h1>
+        <h1 class="text-2xl font-bold">Verifikasi Seminar Proposal</h1>
       </div>
 
-      <!-- Features Section -->
-      <div class="space-y-6">
-        <!-- Link to "Pengajuan Judul Skripsi" Page -->
-        <a href="{{ route('verifikasi-judul-skripsi') }}">
-          <div class="bg-purple-400 text-white text-lg font-bold p-6 rounded-lg shadow-md hover:bg-purple-500 transition mt-4">
-            Verifikasi Judul Skripsi
-          </div>
-        </a>
-
-        <!-- Link to "Pengajuan Seminar Proposal" Page -->
-        <a href="{{ route('verifikasi-seminar-proposal') }}">
-          <div class="bg-purple-400 text-white text-lg font-bold p-6 rounded-lg shadow-md hover:bg-purple-500 transition mt-4">
-            Verifikasi Seminar Proposal
-          </div>
-        </a>
-
-        <!-- Link to "Pengajuan Seminar Hasil" Page -->
-        <a href="{{ route('verifikasi-seminar-hasil') }}">
-          <div class="bg-purple-400 text-white text-lg font-bold p-6 rounded-lg shadow-md hover:bg-purple-500 transition mt-4">
-            Verifikasi Seminar Hasil
-          </div>
-        </a>
+      <!-- Table Section -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <table class="w-full table-auto">
+          <thead>
+            <tr class="bg-purple-400 text-white">
+              <th class="p-4">Nama Mahasiswa</th>
+              <th class="p-4">Program Studi</th>
+              <th class="p-4">Judul</th>
+              <th class="p-4">Dosen Pembimbing</th>
+              <th class="p-4">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Example row for Sinta Dian Monica -->
+            <tr class="bg-white">
+              <td class="p-4">Sinta Dian Monica</td>
+              <td class="p-4">Sastra Mesin</td>
+              <td class="p-4">Analisis kekuatan kaki bangunan menggunakan Cox Regression</td>
+              <td class="p-4">Dwi Rantini</td>
+              <td class="p-4">
+                <div class="flex space-x-2">
+                  <span class="bg-green-500 text-white px-4 py-2 rounded-full">ACC</span>
+                  <span class="bg-red-500 text-white px-4 py-2 rounded-full">Decline</span>
+                </div>
+              </td>
+            </tr>
+            <!-- Example row for Fabyan Riza Kiram -->
+            <tr class="bg-gray-100">
+              <td class="p-4">Fabyan Riza Kiram</td>
+              <td class="p-4">Teknologi Sapi</td>
+              <td class="p-4">Evaluasi Keuangan Bank Sejahtera menggunakan metode Social Network</td>
+              <td class="p-4">Dwi Rantini</td>
+              <td class="p-4">
+                <div class="flex space-x-2">
+                  <span class="bg-green-500 text-white px-4 py-2 rounded-full">ACC</span>
+                  <span class="bg-red-500 text-white px-4 py-2 rounded-full">Decline</span>
+                </div>
+              </td>
+            </tr>
+            <!-- Add more rows as needed -->
+          </tbody>
+        </table>
       </div>
     </div>
 
@@ -90,7 +110,7 @@
           </div>
         </div>
 
-        <!-- Kalender yang Rapi -->
+        <!-- Calendar -->
         <div class="bg-purple-500 p-6 rounded-lg shadow-md w-full">
           <h4 class="text-lg font-bold text-white mb-4 text-center">September 2024</h4>
           <div class="grid grid-cols-7 gap-2 text-center text-white text-sm">
@@ -123,7 +143,7 @@
         </div>
       </div>
 
-      <!-- Notifikasi dan Pengumuman -->
+      <!-- Notification Section -->
       <div class="bg-purple-500 p-6 rounded-lg shadow-md">
         <h4 class="text-lg font-bold text-white mb-4 text-center">Notifikasi</h4>
         <ul class="space-y-4">

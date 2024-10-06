@@ -8,11 +8,9 @@
 </head>
 
 <body class="bg-gray-100">
-
     <div class="min-h-screen flex">
         <!-- Sidebar Kiri -->
         <div class="w-1/12 bg-purple-600 flex flex-col items-center py-10 space-y-8">
-            <!-- Icons in the Sidebar -->
             <a href="{{ route('dashboard-operator') }}" class="text-white">
                 <img src="{{ asset('images/home.png') }}" alt="Home" class="w-8 h-8 mb-4">
             </a>
@@ -35,62 +33,59 @@
 
         <!-- Main Content -->
         <div class="w-8/12 p-8">
-            <!-- Header -->
-            <div class="mb-8">
-                <h1 class="text-2xl font-bold">Data Mahasiswa Seminar Proposal</h1>
-            </div>
+            <h1 class="text-2xl font-bold mb-4">Evaluasi</h1>
 
             <!-- Table Section -->
-            <div class="bg-white p-6 rounded-lg shadow-md overflow-x-auto">
-                <table class="w-full min-w-max table-auto">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <table class="w-full table-auto">
                     <thead>
                         <tr class="bg-purple-400 text-white">
                             <th class="p-4">Nama Mahasiswa</th>
                             <th class="p-4">Program Studi</th>
-                            <th class="p-4">Tanggal</th>
-                            <th class="p-4">Waktu</th>
-                            <th class="p-4">Ruang</th>
-                            <th class="p-4">Dosen Penguji 1</th>
-                            <th class="p-4">Dosen Penguji 2</th>
+                            <th class="p-4">Dosen yang Dituju</th>
+                            <th class="p-4">Topik Keluhan</th>
+                            <th class="p-4">Deskripsi</th>
+                            <th class="p-4">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Add rows dynamically -->
                         <tr class="bg-white">
                             <td class="p-4">Sinta Dian Monica</td>
                             <td class="p-4">Sastra Mesin</td>
-                            <td class="p-4">3 Oktober 2024</td>
-                            <td class="p-4">10.00 - 11.00</td>
-                            <td class="p-4">6.07</td>
-                            <td class="p-4">Dr. Ahmad Fauzi, S.T., M.T.</td>
-                            <td class="p-4">Dr. Ahmad Fauzi, S.T., M.T.</td>
+                            <td class="p-4">Dwi Rantini</td>
+                            <td class="p-4">Sulit ditemui</td>
+                            <td class="p-4">Selama bimbingan seminar, dosen tersebut sulit untuk ditemui.</td>
+                            <td class="p-4">
+                                <span class="bg-yellow-400 text-white py-1 px-3 rounded-full">Waiting</span>
+                            </td>
                         </tr>
                         <tr class="bg-gray-100">
-                            <td class="p-4">Fabyan Riza Kiram</td>
-                            <td class="p-4">Teknologi Sapi</td>
-                            <td class="p-4">3 Oktober 2024</td>
-                            <td class="p-4">11.00 - 12.00</td>
-                            <td class="p-4">6.08</td>
-                            <td class="p-4">Prof. Dr. Siti Aisyah, M.S.</td>
-                            <td class="p-4">Prof. Dr. Siti Aisyah, M.S.</td>
+                            <td class="p-4">Sinta Dian Monica</td>
+                            <td class="p-4">Kedokteran Pastry</td>
+                            <td class="p-4">Dwi Rantini</td>
+                            <td class="p-4">Sulit ditemui</td>
+                            <td class="p-4">Selama bimbingan seminar, dosen tersebut sulit untuk ditemui.</td>
+                            <td class="p-4">
+                                <span class="bg-green-400 text-white py-1 px-3 rounded-full">Done</span>
+                            </td>
                         </tr>
                         <tr class="bg-white">
                             <td class="p-4">Taushiyah Virgi Eka Zahra</td>
-                            <td class="p-4">Kedokteran Pastry</td>
-                            <td class="p-4">3 Oktober 2024</td>
-                            <td class="p-4">13.00 - 14.00</td>
-                            <td class="p-4">6.04</td>
-                            <td class="p-4">Sri Wahyuni, S.E., M.M.</td>
-                            <td class="p-4">Sri Wahyuni, S.E., M.M.</td>
+                            <td class="p-4">Teknologi Sapi</td>
+                            <td class="p-4">Dwi Rantini</td>
+                            <td class="p-4">-</td>
+                            <td class="p-4">-</td>
+                            <td class="p-4">
+                                <span class="bg-yellow-400 text-white py-1 px-3 rounded-full">Waiting</span>
+                            </td>
                         </tr>
-                        <!-- Add more rows as needed -->
                     </tbody>
                 </table>
             </div>
         </div>
 
-        <!-- Right Sidebar -->
-        <div class="w-2/14 p-6 flex flex-col space-y-6 -ml-4">
+        <!-- Sidebar Kanan -->
+        <div class="w-3/15 p-8 flex flex-col space-y-6">
             <!-- Calendar and Date Range -->
             <div class="bg-white p-4 rounded-lg shadow-md">
                 <div class="flex justify-center items-center space-x-4 mb-4">
@@ -100,7 +95,6 @@
                             <option value="1 September">1 September</option>
                             <option value="2 September">2 September</option>
                             <option value="3 September">3 September</option>
-                            <!-- Add more options as needed -->
                         </select>
                     </div>
                     <div class="text-center">
@@ -109,7 +103,6 @@
                             <option value="30 September">30 September</option>
                             <option value="29 September">29 September</option>
                             <option value="28 September">28 September</option>
-                            <!-- Add more options as needed -->
                         </select>
                     </div>
                 </div>
@@ -167,7 +160,6 @@
             </div>
         </div>
     </div>
-
 </body>
 
 </html>

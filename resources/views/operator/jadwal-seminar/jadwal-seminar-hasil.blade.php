@@ -37,60 +37,95 @@
         <div class="w-8/12 p-8">
             <!-- Header -->
             <div class="mb-8">
-                <h1 class="text-2xl font-bold">Data Mahasiswa Seminar Proposal</h1>
+                <h1 class="text-2xl font-bold">Jadwal Seminar Hasil</h1>
             </div>
 
-            <!-- Table Section -->
-            <div class="bg-white p-6 rounded-lg shadow-md overflow-x-auto">
-                <table class="w-full min-w-max table-auto">
-                    <thead>
-                        <tr class="bg-purple-400 text-white">
-                            <th class="p-4">Nama Mahasiswa</th>
-                            <th class="p-4">Program Studi</th>
-                            <th class="p-4">Tanggal</th>
-                            <th class="p-4">Waktu</th>
-                            <th class="p-4">Ruang</th>
-                            <th class="p-4">Dosen Penguji 1</th>
-                            <th class="p-4">Dosen Penguji 2</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Add rows dynamically -->
-                        <tr class="bg-white">
-                            <td class="p-4">Sinta Dian Monica</td>
-                            <td class="p-4">Sastra Mesin</td>
-                            <td class="p-4">3 Oktober 2024</td>
-                            <td class="p-4">10.00 - 11.00</td>
-                            <td class="p-4">6.07</td>
-                            <td class="p-4">Dr. Ahmad Fauzi, S.T., M.T.</td>
-                            <td class="p-4">Dr. Ahmad Fauzi, S.T., M.T.</td>
-                        </tr>
-                        <tr class="bg-gray-100">
-                            <td class="p-4">Fabyan Riza Kiram</td>
-                            <td class="p-4">Teknologi Sapi</td>
-                            <td class="p-4">3 Oktober 2024</td>
-                            <td class="p-4">11.00 - 12.00</td>
-                            <td class="p-4">6.08</td>
-                            <td class="p-4">Prof. Dr. Siti Aisyah, M.S.</td>
-                            <td class="p-4">Prof. Dr. Siti Aisyah, M.S.</td>
-                        </tr>
-                        <tr class="bg-white">
-                            <td class="p-4">Taushiyah Virgi Eka Zahra</td>
-                            <td class="p-4">Kedokteran Pastry</td>
-                            <td class="p-4">3 Oktober 2024</td>
-                            <td class="p-4">13.00 - 14.00</td>
-                            <td class="p-4">6.04</td>
-                            <td class="p-4">Sri Wahyuni, S.E., M.M.</td>
-                            <td class="p-4">Sri Wahyuni, S.E., M.M.</td>
-                        </tr>
-                        <!-- Add more rows as needed -->
-                    </tbody>
-                </table>
+            <!-- Form Section -->
+            <div class="bg-purple-400 p-6 rounded-lg shadow-md">
+                <!-- Nama Mahasiswa -->
+                <div class="mb-4 flex justify-between">
+                    <span class="font-bold text-white">Nama Mahasiswa</span>
+                    <span class="text-white">Sinta Dian Monica</span>
+                </div>
+
+                <!-- Program Studi -->
+                <div class="mb-4 flex justify-between">
+                    <span class="font-bold text-white">Program Studi</span>
+                    <select class="p-2 rounded bg-gray-100">
+                        <option>Teknologi Sains Data</option>
+                        <option>Informatika</option>
+                        <option>Sistem Informasi</option>
+                    </select>
+                </div>
+
+                <!-- Dosen Pembimbing I -->
+                <div class="mb-4 flex justify-between">
+                    <span class="font-bold text-white">Dosen Pembimbing I</span>
+                    <select class="p-2 rounded bg-gray-100">
+                        <option>Dr. Aziz Fajar, S.Kom., M.Kom.</option>
+                        <option>Dr. Budi Santoso, S.Kom., M.Kom.</option>
+                    </select>
+                </div>
+
+                <!-- Dosen Pembimbing II -->
+                <div class="mb-4 flex justify-between">
+                    <span class="font-bold text-white">Dosen Pembimbing II</span>
+                    <select class="p-2 rounded bg-gray-100">
+                        <option>Indah Fahmiyah, S.Si., M.Stat</option>
+                        <option>Retno Rahmawati, M.Sc.</option>
+                    </select>
+                </div>
+
+                <!-- Dosen Penguji I -->
+                <div class="mb-4 flex justify-between">
+                    <span class="font-bold text-white">Dosen Penguji I</span>
+                    <select class="p-2 rounded bg-gray-100">
+                        <option>Ratih Ardiati Ningrum, S.Si., M.Stat.</option>
+                        <option>Siti Aminah, S.Pd., M.Kom.</option>
+                    </select>
+                </div>
+
+                <!-- Dosen Penguji II -->
+                <div class="mb-4 flex justify-between">
+                    <span class="font-bold text-white">Dosen Penguji II</span>
+                    <select class="p-2 rounded bg-gray-100">
+                        <option>Ratih Ardiati Ningrum, S.Si., M.Stat.</option>
+                        <option>Siti Aminah, S.Pd., M.Kom.</option>
+                    </select>
+                </div>
+
+                <!-- Tanggal Semhas -->
+                <div class="mb-4 flex justify-between">
+                    <span class="font-bold text-white">Tanggal Semhas</span>
+                    <select class="p-2 rounded bg-gray-100">
+                        <option>Senin, 20 Jan 2025</option>
+                        <option>Selasa, 21 Jan 2025</option>
+                    </select>
+                </div>
+
+                <!-- Waktu Semhas -->
+                <div class="mb-4 flex justify-between">
+                    <span class="font-bold text-white">Waktu Semhas</span>
+                    <select class="p-2 rounded bg-gray-100">
+                        <option>13.00 - 14.00 WIB</option>
+                        <option>14.00 - 15.00 WIB</option>
+                    </select>
+                </div>
+
+                <!-- Ruangan -->
+                <div class="mb-4 flex justify-between">
+                    <span class="font-bold text-white">Ruangan</span>
+                    <a href="{{ route('penentuan-ruangan-semhas') }}" class="bg-gray-600 text-white px-4 py-2 rounded-full">Pilih</a>     
+                </div>
+
+                <div class="flex justify-end">
+                    <button class="bg-gray-600 text-white px-4 py-2 rounded-full">Done</button>
+                </div>
             </div>
         </div>
 
         <!-- Right Sidebar -->
-        <div class="w-2/14 p-6 flex flex-col space-y-6 -ml-4">
+        <div class="w-3/15 p-8 flex flex-col space-y-6">
             <!-- Calendar and Date Range -->
             <div class="bg-white p-4 rounded-lg shadow-md">
                 <div class="flex justify-center items-center space-x-4 mb-4">

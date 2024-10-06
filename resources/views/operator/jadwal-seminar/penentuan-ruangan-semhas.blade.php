@@ -8,11 +8,9 @@
 </head>
 
 <body class="bg-gray-100">
-
     <div class="min-h-screen flex">
         <!-- Sidebar Kiri -->
         <div class="w-1/12 bg-purple-600 flex flex-col items-center py-10 space-y-8">
-            <!-- Icons in the Sidebar -->
             <a href="{{ route('dashboard-operator') }}" class="text-white">
                 <img src="{{ asset('images/home.png') }}" alt="Home" class="w-8 h-8 mb-4">
             </a>
@@ -35,62 +33,44 @@
 
         <!-- Main Content -->
         <div class="w-8/12 p-8">
-            <!-- Header -->
-            <div class="mb-8">
-                <h1 class="text-2xl font-bold">Data Mahasiswa Seminar Proposal</h1>
+            <h1 class="text-2xl font-bold mb-4">Ruangan Seminar Proposal</h1>
+
+            <!-- Tanggal Select -->
+            <div class="mb-4">
+                <label class="font-bold mr-2">Tanggal:</label>
+                <select class="bg-gray-100 border border-gray-300 rounded px-4 py-2">
+                    <option>Jumaat, 4 Oktober 2024</option>
+                    <option>Kamis, 3 Oktober 2024</option>
+                </select>
             </div>
 
-            <!-- Table Section -->
-            <div class="bg-white p-6 rounded-lg shadow-md overflow-x-auto">
-                <table class="w-full min-w-max table-auto">
-                    <thead>
-                        <tr class="bg-purple-400 text-white">
-                            <th class="p-4">Nama Mahasiswa</th>
-                            <th class="p-4">Program Studi</th>
-                            <th class="p-4">Tanggal</th>
-                            <th class="p-4">Waktu</th>
-                            <th class="p-4">Ruang</th>
-                            <th class="p-4">Dosen Penguji 1</th>
-                            <th class="p-4">Dosen Penguji 2</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Add rows dynamically -->
-                        <tr class="bg-white">
-                            <td class="p-4">Sinta Dian Monica</td>
-                            <td class="p-4">Sastra Mesin</td>
-                            <td class="p-4">3 Oktober 2024</td>
-                            <td class="p-4">10.00 - 11.00</td>
-                            <td class="p-4">6.07</td>
-                            <td class="p-4">Dr. Ahmad Fauzi, S.T., M.T.</td>
-                            <td class="p-4">Dr. Ahmad Fauzi, S.T., M.T.</td>
-                        </tr>
-                        <tr class="bg-gray-100">
-                            <td class="p-4">Fabyan Riza Kiram</td>
-                            <td class="p-4">Teknologi Sapi</td>
-                            <td class="p-4">3 Oktober 2024</td>
-                            <td class="p-4">11.00 - 12.00</td>
-                            <td class="p-4">6.08</td>
-                            <td class="p-4">Prof. Dr. Siti Aisyah, M.S.</td>
-                            <td class="p-4">Prof. Dr. Siti Aisyah, M.S.</td>
-                        </tr>
-                        <tr class="bg-white">
-                            <td class="p-4">Taushiyah Virgi Eka Zahra</td>
-                            <td class="p-4">Kedokteran Pastry</td>
-                            <td class="p-4">3 Oktober 2024</td>
-                            <td class="p-4">13.00 - 14.00</td>
-                            <td class="p-4">6.04</td>
-                            <td class="p-4">Sri Wahyuni, S.E., M.M.</td>
-                            <td class="p-4">Sri Wahyuni, S.E., M.M.</td>
-                        </tr>
-                        <!-- Add more rows as needed -->
-                    </tbody>
-                </table>
+            <!-- Room Layout -->
+            <div class="bg-gray-200 p-6 rounded-lg relative grid grid-cols-3 gap-4">
+                <div class="bg-green-500 p-6 flex items-center justify-center text-white font-bold cursor-pointer"
+                    onclick="showPopup('6.04', 'green')">
+                    6.04
+                </div>
+                <div class="bg-red-500 p-6 flex items-center justify-center text-white font-bold cursor-pointer"
+                    onclick="showPopup('6.05', 'red')">
+                    6.05
+                </div>
+                <div class="bg-green-500 p-6 flex items-center justify-center text-white font-bold cursor-pointer"
+                    onclick="showPopup('6.01', 'green')">
+                    6.01
+                </div>
+                <div class="bg-green-500 p-6 flex items-center justify-center text-white font-bold cursor-pointer"
+                    onclick="showPopup('6.02', 'green')">
+                    6.02
+                </div>
+                <div class="bg-red-500 p-6 flex items-center justify-center text-white font-bold cursor-pointer"
+                    onclick="showPopup('6.03', 'red')">
+                    6.03
+                </div>
             </div>
         </div>
 
         <!-- Right Sidebar -->
-        <div class="w-2/14 p-6 flex flex-col space-y-6 -ml-4">
+        <div class="w-3/15 p-8 flex flex-col space-y-6">
             <!-- Calendar and Date Range -->
             <div class="bg-white p-4 rounded-lg shadow-md">
                 <div class="flex justify-center items-center space-x-4 mb-4">
@@ -100,7 +80,6 @@
                             <option value="1 September">1 September</option>
                             <option value="2 September">2 September</option>
                             <option value="3 September">3 September</option>
-                            <!-- Add more options as needed -->
                         </select>
                     </div>
                     <div class="text-center">
@@ -109,7 +88,6 @@
                             <option value="30 September">30 September</option>
                             <option value="29 September">29 September</option>
                             <option value="28 September">28 September</option>
-                            <!-- Add more options as needed -->
                         </select>
                     </div>
                 </div>
@@ -118,7 +96,8 @@
                 <div class="bg-purple-500 p-6 rounded-lg shadow-md w-full">
                     <h4 class="text-lg font-bold text-white mb-4 text-center">September 2024</h4>
                     <div class="grid grid-cols-7 gap-2 text-center text-white text-sm">
-                        <span>Sun</span> <span>Mon</span> <span>Tue</span> <span>Wed</span> <span>Thu</span> <span>Fri</span> <span>Sat</span>
+                        <span>Sun</span> <span>Mon</span> <span>Tue</span> <span>Wed</span> <span>Thu</span>
+                        <span>Fri</span> <span>Sat</span>
                         <span class="text-gray-400">1</span>
                         <span class="text-gray-400">2</span>
                         <span>3</span>
@@ -168,6 +147,49 @@
         </div>
     </div>
 
+    <!-- Pop-up for Available Times -->
+    <div id="popup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-80">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-lg font-bold">Waktu Tersedia</h2>
+                <button onclick="closePopup()" class="text-red-500 font-bold">X</button>
+            </div>
+            <div class="space-y-2" id="popup-times">
+                <!-- Time slots will be injected here dynamically based on the room -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPopup(room, status) {
+            const popupTimes = document.getElementById('popup-times');
+            popupTimes.innerHTML = '';
+
+            const times = ['09.00 - 10.00', '11.00 - 12.00', '13.00 - 14.00', '14.00 - 15.00', '15.00 - 16.00'];
+
+            if (status === 'red') {
+                times.forEach(time => {
+                    popupTimes.innerHTML += `<button class="w-full bg-red-500 text-white p-2 rounded">${time}</button>`;
+                });
+            } else if (status === 'green') {
+                times.forEach((time, index) => {
+                    let color = 'bg-green-500'; // Default to green
+                    if (index === 0 || index === 4) {
+                        color = 'bg-red-500'; // Booked
+                    } else if (index === 2) {
+                        color = 'bg-gray-400'; // Pending
+                    }
+                    popupTimes.innerHTML += `<button class="w-full ${color} text-white p-2 rounded">${time}</button>`;
+                });
+            }
+
+            document.getElementById("popup").classList.remove("hidden");
+        }
+
+        function closePopup() {
+            document.getElementById("popup").classList.add("hidden");
+        }
+    </script>
 </body>
 
 </html>

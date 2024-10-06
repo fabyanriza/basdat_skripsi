@@ -43,23 +43,16 @@
       <!-- Features Section -->
       <div class="space-y-6">
         <!-- Link to "Pengajuan Judul Skripsi" Page -->
-        <a href="{{ route('verifikasi-judul-skripsi') }}">
+        <a href="{{ route('jadwal-seminar-proposal') }}">
           <div class="bg-purple-400 text-white text-lg font-bold p-6 rounded-lg shadow-md hover:bg-purple-500 transition mt-4">
-            Verifikasi Judul Skripsi
+            Jadwal Seminar Proposal
           </div>
         </a>
 
         <!-- Link to "Pengajuan Seminar Proposal" Page -->
-        <a href="{{ route('verifikasi-seminar-proposal') }}">
+        <a href="{{ route('jadwal-seminar-hasil') }}">
           <div class="bg-purple-400 text-white text-lg font-bold p-6 rounded-lg shadow-md hover:bg-purple-500 transition mt-4">
-            Verifikasi Seminar Proposal
-          </div>
-        </a>
-
-        <!-- Link to "Pengajuan Seminar Hasil" Page -->
-        <a href="{{ route('verifikasi-seminar-hasil') }}">
-          <div class="bg-purple-400 text-white text-lg font-bold p-6 rounded-lg shadow-md hover:bg-purple-500 transition mt-4">
-            Verifikasi Seminar Hasil
+            Jadwal Seminar Hasil
           </div>
         </a>
       </div>
