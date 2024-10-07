@@ -40,8 +40,8 @@
         <h1 class="text-2xl font-bold">Verifikasi Seminar Proposal</h1>
       </div>
 
-      <!-- Table Section -->
-      <div class="bg-white p-6 rounded-lg shadow-md">
+      <!-- Table Section dengan Scroll Horizontal -->
+      <div class="bg-white p-6 rounded-lg shadow-md overflow-x-auto whitespace-nowrap">
         <table class="w-full table-auto">
           <thead>
             <tr class="bg-purple-400 text-white">
@@ -49,6 +49,7 @@
               <th class="p-4">Program Studi</th>
               <th class="p-4">Judul</th>
               <th class="p-4">Dosen Pembimbing</th>
+              <th class="p-4">Berkas</th> <!-- Kolom Berkas dipindahkan ke sini -->
               <th class="p-4">Status</th>
             </tr>
           </thead>
@@ -59,6 +60,10 @@
               <td class="p-4">Sastra Mesin</td>
               <td class="p-4">Analisis kekuatan kaki bangunan menggunakan Cox Regression</td>
               <td class="p-4">Dwi Rantini</td>
+              <td class="p-4">
+                <!-- Input untuk Upload Berkas -->
+                <input type="file" class="bg-gray-200 border border-gray-300 rounded p-2">
+              </td>
               <td class="p-4">
                 <div class="flex space-x-2">
                   <span class="bg-green-500 text-white px-4 py-2 rounded-full">ACC</span>
@@ -72,6 +77,10 @@
               <td class="p-4">Teknologi Sapi</td>
               <td class="p-4">Evaluasi Keuangan Bank Sejahtera menggunakan metode Social Network</td>
               <td class="p-4">Dwi Rantini</td>
+              <td class="p-4">
+                <!-- Input untuk Upload Berkas -->
+                <input type="file" class="bg-gray-200 border border-gray-300 rounded p-2">
+              </td>
               <td class="p-4">
                 <div class="flex space-x-2">
                   <span class="bg-green-500 text-white px-4 py-2 rounded-full">ACC</span>

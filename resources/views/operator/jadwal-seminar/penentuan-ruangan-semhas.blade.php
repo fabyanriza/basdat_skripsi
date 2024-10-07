@@ -33,7 +33,7 @@
 
         <!-- Main Content -->
         <div class="w-8/12 p-8">
-            <h1 class="text-2xl font-bold mb-4">Ruangan Seminar Proposal</h1>
+            <h1 class="text-2xl font-bold mb-4">Ruangan Seminar Hasil</h1>
 
             <!-- Tanggal Select -->
             <div class="mb-4">

@@ -37,7 +37,7 @@
     <div class="w-8/12 p-8">
       <!-- Header -->
       <div class="mb-8">
-        <h1 class="text-2xl font-bold">Verifikasi Pengajuan Skripsi</h1>
+        <h1 class="text-2xl font-bold">Jadwal Seminar</h1>
       </div>
 
       <!-- Features Section -->
