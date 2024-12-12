@@ -1,85 +1,140 @@
 <!doctype html>
-<html>
+<html lang="id">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <title>Dashboard Operator</title>
+  <style>
+    body {
+      background-color: #ffffff; /* Set background color to white */
+    }
+    .sidebar-item {
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .sidebar-item:hover {
+      background-color: #4A5568; /* Darker gray */
+      color: white;
+    }
+    .card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    .responsive-image {
+      width:30%; /* Gambar menyesuaikan lebar kontainer */
+      height: 30%; /* Mempertahankan rasio gambar */
+    }
+  </style>
 </head>
-<body>
-<div class="min-h-screen bg-gray-100 p-6 flex">
+<body class="bg-white"> <!-- Set body background to white -->
+<div class="min-h-screen p-6 flex">
     <!-- Sidebar -->
-    <div class="w-1/6 bg-indigo-500 rounded-r-lg p-4">
-        <!-- Sidebar content (optional) -->
+    <div class="w-1/6">
+        <div class="bg-white rounded-lg shadow-md border border-blue-400"> <!-- White background -->
+            <div class="bg-gradient-to-t from-blue-300 to-white p-6 rounded-t-lg"> <!-- Blue gradient at the top -->
+                <h2 class="text-lg font-bold text-black text-center">Menu</h2>
+            </div>
+            <div class="flex flex-col space-y-16 p-4">
+                <a href="{{ route('dashboard-operator') }}" class="sidebar-item flex items-center p-2 rounded-lg">
+                    <img src="{{ asset('images/home.png') }}" alt="Logo 1" class="w-6 h-6">
+                    <span class="ml-2">Home</span>
+                </a>
+                <a href="{{ route('judul-skripsi-operator') }}" class="sidebar-item flex items-center p-2 rounded-lg">
+                    <img src="{{ asset('images/thesis.png') }}" alt="Logo 2" class="w-6 h-6">
+                    <span class="ml-2">Judul Skripsi</span>
+                </a>
+                <a href="{{ route('seminar-proposal-operator') }}" class="sidebar-item flex items-center p-2 rounded-lg">
+                    <img src="{{ asset('images/public-speaking.png') }}" alt="Logo 3" class="w-6 h-6">
+                    <span class="ml-2">Seminar Proposal</span>
+                </a>
+                <a href="{{ route('seminar-hasil-operator') }}" class="sidebar-item flex items-center p-2 rounded-lg">
+                    <img src="{{ asset('images/talk.png') }}" alt="Logo 4" class="w-6 h-6">
+                    <span class="ml-2">Seminar Hasil</span>
+                </a>
+                <a href="{{ route('evaluasi') }}" class="sidebar-item flex items-center p-2 rounded-lg">
+                    <img src="{{ asset('images/clipboard.png') }}" alt="Logo 5" class="w-6 h-6">
+                    <span class="ml-2">Evaluasi</span>
+                </a>
+            </div>
+        </div>
     </div>
 
     <!-- Main Content -->
     <div class="flex-1 ml-6">
-        <!-- Header -->
-        <div class="bg-white p-6 rounded-lg shadow-md flex justify-between items-center">
+        <!-- Header and Welcome Banner Combined -->
+        <div class="mb-6">
             <h1 class="text-2xl font-bold">Dashboard Operator</h1>
-            <div class="w-10 h-10 rounded-full bg-gray-300"></div>
-        </div>
-
-        <!-- Welcome Banner -->
-        <div class="my-6 bg-gradient-to-r from-blue-400 to-purple-500 text-white p-6 rounded-lg shadow-md flex justify-between items-center">
-            <div>
-                <h2 class="text-xl font-bold">Selamat Datang di Website Skripsi!</h2>
+            <div class="my-4 bg-gradient-to-r from-white to-blue-200 text-black p-6 rounded-lg shadow-md flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-bold">Selamat Datang di Website Skripsi!</h2>
+                    <p class="text-sm">Tempat di mana perjalanan skripsi Anda menjadi lebih mudah.</p>
+                </div>
+                <img src="{{ asset('images/dashboard-operator.png') }}" alt="Ilustrasi" class="responsive-image "> <!-- Menyisipkan gambar dengan penyesuaian -->
             </div>
-            <div class="w-20 h-20 rounded-full bg-gray-300"></div>
         </div>
 
         <!-- Feature Section -->
-        <h3 class="text-xl font-bold mb-4">Feature</h3>
+        <h3 class="text-xl font-bold mb-4">Fitur</h3>
         <div class="grid grid-cols-2 gap-6">
-            <!-- Data Mahasiswa -->
-            <a href="{{ route('data-mahasiswa') }}" class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-6 rounded-lg shadow-md">
-                <h4 class="text-lg font-bold">Data Mahasiswa</h4>
+            <a href="{{ route('judul-skripsi-operator') }}" class="card bg-gradient-to-r from-red-200 to-white text-black p-6 rounded-lg shadow-md mb-4">
+                <h4 class="text-lg font-bold">Judul Skripsi</h4>
+                <p class="text-sm text-gray-600">Ajukan judul skripsi Anda kepada dosen pembimbing</p>
             </a>
 
-            <!-- Verifikasi Pengajuan Seminar -->
-            <a href="{{ route('verifikasi-pengajuan-skripsi') }}" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-6 rounded-lg shadow-md">
-                <h4 class="text-lg font-bold">Verifikasi Pengajuan Skripsi</h4>
+            <a href="{{ route('seminar-proposal-operator') }}" class="card bg-gradient-to-r from-green-200 to-white text-black p-6 rounded-lg shadow-md mb-4">
+                <h4 class="text-lg font-bold">Proposal</h4>
+                <p class="text-sm text-gray-600">Daftarkan proposal Anda menuju lulus tepat waktu</p>
             </a>
 
-            <!-- Jadwal Seminar -->
-            <a href="{{ route('jadwal-seminar') }}" class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-6 rounded-lg shadow-md">
-                <h4 class="text-lg font-bold">Jadwal Seminar</h4>
+            <a href="{{ route('seminar-hasil-operator') }}" class="card bg-gradient-to-r from-purple-200 to-white text-black p-6 rounded-lg shadow-md">
+                <h4 class="text-lg font-bold">Seminar</h4>
+                <p class="text-sm text-gray-600">Langkah terakhir menuju masa depan yang cerah!</p>
             </a>
 
-            <!-- Jadwal Bimbingan -->
-            <a href="{{ route('jadwal-bimbingan') }}" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-6 rounded-lg shadow-md">
-                <h4 class="text-lg font-bold">Jadwal Bimbingan</h4>
-            </a>
-
-            <!-- Evaluasi -->
-            <a href="{{ route('evaluasi') }}" class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-6 rounded-lg shadow-md">
+            <a href="{{ route('evaluasi') }}" class="card bg-gradient-to-r from-orange-200 to-white text-black p-6 rounded-lg shadow-md">
                 <h4 class="text-lg font-bold">Evaluasi</h4>
+                <p class="text-sm text-gray-600">Berikan penilaian terhadap kepuasaan Anda bersama kami!</p>
             </a>
         </div>
     </div>
 
     <!-- Right Section (Calendar and Notifications) -->
-    <div class="w-1/3 ml-6 space-y-6">
-        <!-- Date Range Boxes -->
-        <div class="grid grid-cols-2 gap-4">
-            <!-- From Date -->
-            <div class="bg-white p-4 rounded-lg shadow-md text-center">
-                <h4 class="text-lg font-bold">From: 1 September</h4>
+    <div class="w-1/4 ml-6 space-y-6">
+        <!-- Date Range -->
+        <div class="bg-white p-4 rounded-lg shadow-md">
+            <div class="flex justify-center items-center space-x-4 mb-4">
+            <div class="text-center">
+                <label for="from-date" class="block text-lg font-bold">From:</label>
+                <select id="from-date" class="bg-white border border-gray-300 rounded p-2">
+                    <option value="1 September">1 September</option>
+                    <option value="2 September">2 September</option>
+                    <option value="3 September">3 September</option>
+                <!-- Add more options as needed -->
+                </select>
             </div>
-            <!-- To Date -->
-            <div class="bg-white p-4 rounded-lg shadow-md text-center">
-                <h4 class="text-lg font-bold">To: 30 September</h4>
+            <div class="text-center">
+                <label for="to-date" class="block text-lg font-bold">To:</label>
+                <select id="to-date" class="bg-white border border-gray-300 rounded p-2">
+                    <option value="30 September">30 September</option>
+                    <option value="29 September">29 September</option>
+                    <option value="28 September">28 September</option>
+                <!-- Add more options as needed -->
+                </select>
             </div>
         </div>
-
+        
         <!-- Calendar -->
-        <div class="bg-purple-500 p-6 rounded-lg shadow-md">
-            <h4 class="text-lg font-bold text-white mb-4 text-center">September 2024</h4>
-            <div class="grid grid-cols-7 gap-1 text-center text-white">
+        <div class="bg-white rounded-lg shadow-md border border-blue-400">
+            <div class="bg-gradient-to-t from-blue-300 to-white p-4 rounded-t-lg">
+                <h4 class="text-lg font-bold text-black text-center">September 2024</h4>
+            </div>
+            <div class="grid grid-cols-7 gap-2 text-center text-black p-4">
                 <span>Sun</span> <span>Mon</span> <span>Tue</span> <span>Wed</span> <span>Thu</span> <span>Fri</span> <span>Sat</span>
-                <!-- Add dates -->
-                <span class="text-gray-400">1</span>
-                <span class="text-gray-400">2</span>
+                <span>1</span>
+                <span>2</span>
                 <span>3</span>
                 <span>4</span>
                 <span>5</span>
@@ -90,7 +145,7 @@
                 <span>10</span>
                 <span>11</span>
                 <span>12</span>
-                <span class="bg-red-500 text-white rounded-full p-2">19</span>
+                <span class="bg-gradient-to-r from-blue-400 to-white text-black font-bold rounded-full p-2">19</span>
                 <span>20</span>
                 <span>21</span>
                 <span>22</span>
@@ -106,20 +161,22 @@
         </div>
 
         <!-- Notification Section -->
-        <div class="bg-purple-500 p-6 rounded-lg shadow-md">
-            <h4 class="text-lg font-bold text-white mb-4 text-center">Notifikasi</h4>
-            <ul class="space-y-4">
-                <li class="bg-white p-4 rounded-lg flex justify-between items-center">
-                    <span class="text-purple-500 font-bold">Seminar Hasil</span>
-                    <span class="text-xs text-gray-500">Mon, 25 Jan 2025</span>
+        <div class="bg-white rounded-lg shadow-md">
+            <div class="bg-gradient-to-t from-blue-300 to-white p-4 rounded-t-lg">
+                <h4 class="text-lg font-bold text-black  text-center">Notifikasi</h4>
+            </div>
+            <ul class="space-y-4 p-4">
+                <li class="bg-white text-black p-4 rounded-lg flex justify-between items-center border border-blue-400">
+                    <span class="font-bold">Seminar Hasil</span>
+                    <span class="text-xs">Mon, 25 Jan 2025</span>
                 </li>
-                <li class="bg-white p-4 rounded-lg flex justify-between items-center">
-                    <span class="text-purple-500 font-bold">Yudisium Periode V</span>
-                    <span class="text-xs text-gray-500">Mon, 22 Feb 2025</span>
+                <li class="bg-white text-black p-4 rounded-lg flex justify-between items-center border border-blue-400">
+                    <span class="font-bold">Yudisium Periode V</span>
+                    <span class="text-xs">Mon, 22 Feb 2025</span>
                 </li>
-                <li class="bg-white p-4 rounded-lg flex justify-between items-center">
-                    <span class="text-purple-500 font-bold">Wisuda 130</span>
-                    <span class="text-xs text-gray-500">Thu, 06 Mar 2025</span>
+                <li class="bg-white text-black p-4 rounded-lg flex justify-between items-center border border-blue-400">
+                    <span class="font-bold">Wisuda 130</span>
+                    <span class="text-xs">Thu, 06 Mar 2025</span>
                 </li>
             </ul>
         </div>

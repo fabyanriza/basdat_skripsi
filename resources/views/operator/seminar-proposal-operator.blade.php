@@ -2,10 +2,10 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
     body {
       background-color: #ffffff; /* Set background color to white */
     }
@@ -34,10 +34,10 @@
 </head>
 
 <body class="bg-white">
-    <div class="min-h-screen p-6 flex">
-        <!-- Sidebar Kiri -->
-        <div class="w-1/6">
-        <div class="bg-white rounded-lg shadow-md border border-blue-400"> <!-- White background -->
+<div class="min-h-screen p-6 flex">
+    <!-- Sidebar Kiri -->
+    <div class="w-1/6">
+        <div class="sidebar bg-white rounded-lg shadow-md border border-blue-400"> <!-- White background -->
             <div class="bg-gradient-to-t from-blue-300 to-white p-6 rounded-t-lg"> <!-- Blue gradient at the top -->
                 <h2 class="text-lg font-bold text-black text-center">Menu</h2>
             </div>
@@ -65,64 +65,71 @@
             </div>
         </div>
     </div>
-        <!-- Main Content -->
-        <div class="flex-1 ml-6">
-            <!-- Header -->
-            <div class="mb-6">
-                <h1 class="text-2xl font-bold">Evaluasi</h1>
-            </div>
 
-            <!-- Table Section -->
-            <div class="bg-white p-1 rounded-lg shadow-md">
-                <table class="w-full table-auto">
-                    <thead>
-                        <tr class="bg-gradient-to-t from-blue-300 to-white p-4 rounded-t-lg">
-                            <th class="p-4">Nama Mahasiswa</th>
-                            <th class="p-4">Program Studi</th>
-                            <th class="p-4">Dosen yang Dituju</th>
-                            <th class="p-4">Topik Keluhan</th>
-                            <th class="p-4">Deskripsi</th>
-                            <th class="p-4">Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-white">
-                            <td class="p-4">Sinta Dian Monica</td>
-                            <td class="p-4">Sastra Mesin</td>
-                            <td class="p-4">Dwi Rantini</td>
-                            <td class="p-4">Sulit ditemui</td>
-                            <td class="p-4">Selama bimbingan seminar, dosen tersebut sulit untuk ditemui.</td>
-                            <td class="p-4">
-                                <span class="bg-yellow-400 text-white py-1 px-3 rounded-full">Waiting</span>
-                            </td>
-                        </tr>
-                        <tr class="bg-gray-100">
-                            <td class="p-4">Sinta Dian Monica</td>
-                            <td class="p-4">Kedokteran Pastry</td>
-                            <td class="p-4">Dwi Rantini</td>
-                            <td class="p-4">Sulit ditemui</td>
-                            <td class="p-4">Selama bimbingan seminar, dosen tersebut sulit untuk ditemui.</td>
-                            <td class="p-4">
-                                <span class="bg-green-400 text-white py-1 px-3 rounded-full">Done</span>
-                            </td>
-                        </tr>
-                        <tr class="bg-white">
-                            <td class="p-4">Taushiyah Virgi Eka Zahra</td>
-                            <td class="p-4">Teknologi Sapi</td>
-                            <td class="p-4">Dwi Rantini</td>
-                            <td class="p-4">-</td>
-                            <td class="p-4">-</td>
-                            <td class="p-4">
-                                <span class="bg-yellow-400 text-white py-1 px-3 rounded-full">Waiting</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+  
+    <!-- Main Content -->
+    <div class="w-8/12 p-8">
+      <!-- Header -->
+      <div class="mb-1">
+        <h1 class="text-2xl font-bold">Verifikasi Seminar Proposal</h1>
+      </div>
 
-        <!-- Sidebar Kanan -->
-        <div class="w-1/4 ml-6 space-y-6">
+      <!-- Table Section dengan Scroll Horizontal -->
+      <div class="bg-white p-6 rounded-lg shadow-md overflow-x-auto whitespace-nowrap">
+        <table class="w-full table-auto">
+          <thead>
+            <tr class="bg-gradient-to-t from-blue-300 to-white p-4 rounded-t-lg">
+              <th class="p-4">Nama Mahasiswa</th>
+              <th class="p-4">Program Studi</th>
+              <th class="p-4">Judul</th>
+              <th class="p-4">Dosen Pembimbing</th>
+              <th class="p-4">Berkas</th> <!-- Kolom Berkas dipindahkan ke sini -->
+              <th class="p-4">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Example row for Sinta Dian Monica -->
+            <tr class="bg-white">
+              <td class="p-4">Sinta Dian Monica</td>
+              <td class="p-4">Sastra Mesin</td>
+              <td class="p-4">Analisis kekuatan kaki bangunan menggunakan Cox Regression</td>
+              <td class="p-4">Dwi Rantini</td>
+              <td class="p-4">
+                <!-- Input untuk Upload Berkas -->
+                <input type="file" class="bg-gray-200 border border-gray-300 rounded p-2">
+              </td>
+              <td class="p-4">
+                <div class="flex space-x-2">
+                  <span class="bg-green-500 text-white px-4 py-2 rounded-full">ACC</span>
+                  <span class="bg-red-500 text-white px-4 py-2 rounded-full">Decline</span>
+                </div>
+              </td>
+            </tr>
+            <!-- Example row for Fabyan Riza Kiram -->
+            <tr class="bg-gray-100">
+              <td class="p-4">Fabyan Riza Kiram</td>
+              <td class="p-4">Teknologi Sapi</td>
+              <td class="p-4">Evaluasi Keuangan Bank Sejahtera menggunakan metode Social Network</td>
+              <td class="p-4">Dwi Rantini</td>
+              <td class="p-4">
+                <!-- Input untuk Upload Berkas -->
+                <input type="file" class="bg-gray-200 border border-gray-300 rounded p-2">
+              </td>
+              <td class="p-4">
+                <div class="flex space-x-2">
+                  <span class="bg-green-500 text-white px-4 py-2 rounded-full">ACC</span>
+                  <span class="bg-red-500 text-white px-4 py-2 rounded-full">Decline</span>
+                </div>
+              </td>
+            </tr>
+            <!-- Add more rows as needed -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="w-1/4 ml-6 space-y-6">
         <!-- Date Range -->
         <div class="bg-white p-4 rounded-lg shadow-md">
             <div class="flex justify-center items-center space-x-4 mb-4">
@@ -201,8 +208,9 @@
             </ul>
         </div>
     </div>
+
   </div>
-    </div>
+
 </body>
 
 </html>
